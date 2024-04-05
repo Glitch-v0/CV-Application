@@ -1,7 +1,7 @@
 export function EditButton() {
     return (
         <div>
-            <button>Edit Section</button>
+            <button>Edit Form</button>
         </div>
     )
 }   
@@ -9,7 +9,7 @@ export function EditButton() {
 export function SubmitButton() {
     return (
         <div>
-            <button>Confirm Section</button>
+            <button>Submit Form</button>
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import '../styles/Experience.css'
 import { useState } from 'react';
-import {EditButton, SubmitButton} from './Buttons.jsx'
 
 export default function ExperienceSection() {
     const [confirmed, toggleConfirmed] = useState(false);
@@ -9,26 +8,42 @@ export default function ExperienceSection() {
         <legend>Relevant Experience</legend>
         <label>
             Company Name:
-            <input type="text" name="companyNameInput" placeholder="Great Product Inc." />
+            <input
+            type="text"
+            name="companyNameInput"
+            placeholder="Great Product Inc."
+            required/>
         </label>
         <label>
             Position Title:
-            <input type="text" name="positionTitleInput" placeholder="Software Developer" />
+            <input
+            type="text"
+            name="positionTitleInput"
+            placeholder="Software Developer"
+            required />
         </label>
         <label>
             Main Responsibilities:
-            <input type="text" name="responsibilitiesInput" placeholder="Slapping keyboard keys" />
+            <input
+            type="text"
+            name="responsibilitiesInput"
+            placeholder="Slapping keyboard keys"
+            required />
         </label>
         <label>
             Start Date:
-            <input type="date" name="startDate"/>
+            <input
+            type="date"
+            name="startDate"
+            required/>
         </label>
         <label>
             End Date (If still there, put today's date):
-            <input type="date" name="endDate"/>
+            <input
+            type="date"
+            name="endDate"
+            required/>
         </label>
-        <EditButton/>
-        <SubmitButton/>
     </fieldset>
     )
 }

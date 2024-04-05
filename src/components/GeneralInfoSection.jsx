@@ -1,6 +1,5 @@
 import '../styles/GeneralInfo.css'
 import { useState } from 'react';
-import {EditButton, SubmitButton} from './Buttons.jsx'
 
 export default function GeneralInfoSection() {
     const [confirmed, toggleConfirmed] = useState(false);
@@ -40,8 +39,7 @@ export default function GeneralInfoSection() {
                 placeholder="111-222-3333"
                 required/>
             </label>
-            <EditButton/>
-            <SubmitButton/>
+    
         </fieldset>
     )
 }
