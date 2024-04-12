@@ -1,8 +1,6 @@
 import '../styles/Experience.css'
-import { useState } from 'react';
 
 export default function ExperienceSection() {
-    const [confirmed, toggleConfirmed] = useState(false);
     return (
         <fieldset>
         <legend>Relevant Experience</legend>
@@ -12,6 +10,7 @@ export default function ExperienceSection() {
             type="text"
             name="companyNameInput"
             placeholder="Great Product Inc."
+            value="Great Product Inc."
             required/>
         </label>
         <label>
@@ -20,6 +19,7 @@ export default function ExperienceSection() {
             type="text"
             name="positionTitleInput"
             placeholder="Software Developer"
+            value="Software Developer"
             required />
         </label>
         <label>
@@ -28,6 +28,7 @@ export default function ExperienceSection() {
             type="text"
             name="responsibilitiesInput"
             placeholder="Slapping keyboard keys"
+            value="Slapping keyboard keys"
             required />
         </label>
         <label>
@@ -35,6 +36,7 @@ export default function ExperienceSection() {
             <input
             type="date"
             name="startDate"
+            value="1991-04-05"
             required/>
         </label>
         <label>
@@ -42,6 +44,7 @@ export default function ExperienceSection() {
             <input
             type="date"
             name="endDate"
+            value="2024-04-05"
             required/>
         </label>
     </fieldset>

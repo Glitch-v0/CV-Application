@@ -2,7 +2,12 @@ import '../styles/Education.css'
 import { useState } from 'react';
 
 export default function EducationSection() {
-    const [confirmed, toggleConfirmed] = useState(false);
+    const [education, setEducation] = useState({
+        schoolNameInput: '',
+        studyTitleInput: '',
+        studyDateInput: ''
+      });
+    
     return (
         <fieldset>
             <legend>Education</legend>
@@ -12,6 +17,7 @@ export default function EducationSection() {
                 type="text"
                 name="schoolNameInput"
                 placeholder="Your alma mater"
+                value="Florida College"
                 required />
             </label>
             <label>
@@ -20,6 +26,7 @@ export default function EducationSection() {
                 type="text"
                 name="studyTitleInput"
                 placeholder="Your fancy degree"
+                value="Master of Music"
                 required />
             </label>
             <label>
@@ -27,6 +34,7 @@ export default function EducationSection() {
                 <input
                 type="date"
                 name="studyDateInput"
+                value="2024-04-11"
                 required/>
             </label>
         </fieldset>

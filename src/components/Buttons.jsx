@@ -1,10 +1,10 @@
-export function EditButton() {
+export function EditButton({ onClick }) {
     return (
         <div>
-            <button>Edit Form</button>
+            <button onClick={onClick}>Edit Form</button>
         </div>
     )
-}   
+}
 
 export function SubmitButton() {
     return (
