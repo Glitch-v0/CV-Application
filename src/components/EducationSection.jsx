@@ -1,13 +1,13 @@
 import '../styles/Education.css'
-import { useState } from 'react';
 
-export default function EducationSection() {
-    const [education, setEducation] = useState({
-        schoolNameInput: '',
-        studyTitleInput: '',
-        studyDateInput: ''
-      });
-    
+export default function EducationSection({formData, setFormData}) {
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData(prevFormData => ({
+          ...prevFormData,
+          [name]: value
+        }));
+    }
     return (
         <fieldset>
             <legend>Education</legend>
@@ -15,26 +15,29 @@ export default function EducationSection() {
                 School Name:
                 <input
                 type="text"
-                name="schoolNameInput"
+                name="schoolName"
                 placeholder="Your alma mater"
-                value="Florida College"
+                value={formData.schoolName}
+                onChange={handleInputChange}
                 required />
             </label>
             <label>
                 Title of Study:
                 <input
                 type="text"
-                name="studyTitleInput"
+                name="studyTitle"
                 placeholder="Your fancy degree"
-                value="Master of Music"
+                value={formData.studyTitle}
+                onChange={handleInputChange}
                 required />
             </label>
             <label>
                 Date of Completion:
                 <input
                 type="date"
-                name="studyDateInput"
-                value="2024-04-11"
+                name="studyDate"
+                value={formData.studyDate}
+                onChange={handleInputChange}
                 required/>
             </label>
         </fieldset>

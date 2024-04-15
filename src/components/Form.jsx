@@ -7,6 +7,21 @@ import {EditButton, SubmitButton} from './Buttons.jsx'
 
 export default function Form() {
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "Nathan",
+    lastName: "Jones",
+    email: "njonessurvey@gmail.com",
+    phone: "256-460-2181",
+    schoolName: "Florida College",
+    studyTitle: "Music Education",
+    studyDate: "2009-09-01",
+    companyName: "Great Product INC",
+    positionTitle: "Software Developer",
+    responsibilities: "Slapping keyboard keys",
+    jobStartDate: "2015-08-01",
+    jobEndDate: "2024-04-15"
+  });
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,40 +37,42 @@ export default function Form() {
   if (submitted){
     display = 
     <>
-    <FormResults/>
+    <FormResults formData={formData}/>
     <EditButton onClick={handleEdit}/>
     </>
   } else {
     display = 
     <>
-    <GeneralInfoSection/>
-    <ExperienceSection/>
-    <EducationSection/>
+    <h1>CV Application</h1>
+    <GeneralInfoSection formData={formData} setFormData={setFormData}/>
+    <ExperienceSection formData={formData} setFormData={setFormData}/>
+    <EducationSection formData={formData} setFormData={setFormData}/>
     <SubmitButton/>
     </>
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      CV Application
+    <form onSubmit={handleSubmit} id='application-form'>
       {display}
     </form>
   )
 }
 
-function FormResults() {
+function FormResults({formData}) {
   return (
     <div>
       <h1>Your submission:</h1>
       <h2>General Info</h2>
-      <p></p>
+      <p>Hello, {formData.firstName} {formData.lastName}!</p>
+      <p>We're delighted to have your information and will be reaching out to you shortly at {formData.phone} or {formData.email}.</p>
       <h2>Education</h2>
-      <p>Your School: </p>
-      <p>You Studied: </p>
-      <p>Date finished: </p>
+      <p>It is neat that you studied at {formData.schoolName}.</p>
+      <p>You pursued {formData.studyTitle} and completed it on {formData.studyDate}.</p>
     
       <h2>Experience</h2>
-      <p></p>
+      <p>During your time at {formData.companyName}, you worked as a {formData.positionTitle}.</p>
+      <p>Your responsibilities included: {formData.responsibilities}.</p>
+      <p>You started {formData.jobStartDate} and finished {formData.jobEndDate}.</p>
     </div>
   )
 }

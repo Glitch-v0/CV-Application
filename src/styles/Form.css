@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    border-radius: 50%;
+}
+
+fieldset {
+    display: grid;
+    gap: min(15px, 2vh);
+    width: 50vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    background-color: rgb(246, 221, 206);
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 1px black;
+}
+
+legend {
+    background-color: rgb(255, 209, 180);
+    border: 1px solid black;
+    font-size: large;
+}
+label {
+    margin: 2px;
+}
+
+input {
+    border: 1px solid black;
+    margin-left: 5px;
+}
+
+h1, h2 {
+    text-align: center;
+}
