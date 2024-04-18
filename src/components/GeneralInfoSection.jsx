@@ -1,5 +1,3 @@
-import '../styles/GeneralInfo.css'
-
 export default function GeneralInfoSection({formData, setFormData}) {
     const handleInputChange = (event) => {
         const { name, value } = event.target;

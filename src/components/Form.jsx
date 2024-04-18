@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
-import '../styles/Form.css'
+import '../styles.css'
 import EducationSection from './EducationSection.jsx'
 import ExperienceSection from './ExperienceSection.jsx'
 import GeneralInfoSection from './GeneralInfoSection.jsx'

@@ -1,5 +1,3 @@
-import '../styles/Education.css'
-
 export default function EducationSection({formData, setFormData}) {
     const handleInputChange = (event) => {
         const { name, value } = event.target;

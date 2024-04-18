@@ -1,5 +1,3 @@
-import '../styles/Experience.css'
-
 export default function ExperienceSection({formData, setFormData} ) {
     const handleInputChange = (event) => {
         const { name, value } = event.target;
