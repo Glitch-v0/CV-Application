@@ -1,7 +1,7 @@
 export function EditButton({ onClick }) {
     return (
         <div>
-            <button onClick={onClick}>Edit Form</button>
+            <button id="editButton" onClick={onClick}>Edit Form</button>
         </div>
     )
 }
@@ -9,7 +9,7 @@ export function EditButton({ onClick }) {
 export function SubmitButton() {
     return (
         <div>
-            <button>Submit Form</button>
+            <button id="submitButton">Submit Form</button>
         </div>
     )
 }

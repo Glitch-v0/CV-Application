@@ -9,9 +9,13 @@ export default function GeneralInfoSection({formData, setFormData}) {
         }));
     }
     return (
-        <fieldset>
-            <legend>General Info</legend>
-            <label>
+        <div id='experience section' className='section-container'>
+            <div id='general-title-container' className='form-section-title-container'>
+                <hr />
+                <h2 id='general-title' className='form-section-title'>Personal Info</h2>
+        </div>
+        <div className='label-container'>
+        <label>
                 First Name:
                 <input
                 type="text"
@@ -52,8 +56,8 @@ export default function GeneralInfoSection({formData, setFormData}) {
                 onChange={handleInputChange}
                 required/>
             </label>
-    
-        </fieldset>
+        </div>
+        </div>
     )
 }
 

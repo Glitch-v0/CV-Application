@@ -9,8 +9,12 @@ export default function ExperienceSection({formData, setFormData} ) {
         }));
     }
     return (
-        <fieldset>
-        <legend>Relevant Experience</legend>
+        <div id='experience section' className='section-container'>
+        <div id='experience-title-container' className='form-section-title-container'>
+        <hr />
+            <h2 id='experience-title' className='form-section-title'>Experience</h2>
+        </div>
+        <div className='label-container'>
         <label>
             Company Name:
             <input
@@ -59,7 +63,8 @@ export default function ExperienceSection({formData, setFormData} ) {
             onChange={handleInputChange}
             required/>
         </label>
-    </fieldset>
+        </div>
+    </div>
     )
 }
 
