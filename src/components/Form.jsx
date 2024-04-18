@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react'
 import '../styles/Form.css'
 import EducationSection from './EducationSection.jsx'
@@ -74,7 +75,7 @@ function FormResults({formData, submitted}) {
         <hr />
         <h2>Personal Info</h2>
         <p>Hello, {formData.firstName} {formData.lastName}!</p>
-        <p>We're delighted to have your information and will be reaching out to you shortly at <b>{formData.phone}</b> or <b>{formData.email}</b>.</p>
+        <p>We are delighted to have your information and will be reaching out to you shortly at <b>{formData.phone}</b> or <b>{formData.email}</b>.</p>
       </div>
       <div id='educationInfo'>
         <hr />
